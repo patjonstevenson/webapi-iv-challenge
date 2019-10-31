@@ -17,7 +17,7 @@ server.get('/', (req, res) => {
 //custom middleware
 
 function logger(req, res, next) {
-  console.log(`[${new Date().toISOString()}] ${req.method} to ${req.url}`);
+  console.log(`[\n${new Date().toISOString()}] ${req.method} to ${req.url} from ${req.ip}\n`);
   next();
 };
 
