@@ -77,7 +77,7 @@ router.put('/:id', validateUserId, async (req, res) => {
     const changes = req.body;
     try {
         const updated = await userDb.update(id, changes);
-        res.status(200).json(updated);
+        res.status(201).json(updated);
     } catch (error) {
         res.status(500).json({ message: "Internal server error", error });
     }
